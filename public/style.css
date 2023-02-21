@@ -1,3 +1,27 @@
-#app { 
-    background-color: orange;
+*{
+    color: black;
 }
+
+#app { 
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+
+}
+
+.Query {
+    background-color:teal;
+    height: 70px;
+}
+
+.Roster {
+    background-color:steelblue;
+    height: 300px;
+}
+
+button {
+    background-color: gray;
+    
+}
+

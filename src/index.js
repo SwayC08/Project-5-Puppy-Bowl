@@ -1,11 +1,15 @@
 import { createRoot } from "react-dom/client";
 import { useState } from "react";
 
+import Query from "./components/Query";
+import Roster from "./components/Roster";
+
 const Main = ()=> {
 
     return (
         <div>
-            Hello!
+            <Query />
+            <Roster />
         </div>
     )
 }
