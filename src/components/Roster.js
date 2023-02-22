@@ -1,42 +1,23 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Roster =(props) =>{
-    const [players, setPlayers]= useState([]);
-
-    const { id } = useParams();
-
-    async function fetchPlayerInfo(){
-        try {
-            const response = await fetch ("https://fsa-puppy-bowl.herokuapp.com/api/2301-FTB-MT-WEB-FT/players");
-            const translatedData = await response.json();
-            const actualData = translatedData.data
-            const trueData = actualData.players
-            setPlayers(trueData);
-
-        } catch (error){
-            console.error(error);
-        }
-    };
-
-    useEffect(()=> {
-        fetchPlayerInfo();
-    }, []);
-
+    console.log(props);
     return(
             <div className="Roster">
                 <ol className="Name">{
-                        !players.length ? <div>data loading</div> :
-                        players.map((singleP, index) => {
+                        props.playerProps.length ? 
+                        props.playerProps.map((singleP, index) => {
                             return (
                                 <li key={index} className="Single">
                                     <p> Name: {singleP.name} </p>
-                                    <p> Breed: {singleP.breed}</p>
-                                    {/* <p> Status: {singleP.status}</p> */}
-                                    <button>More Details</button>
+                                    <p> Breed: {singleP.breed}</p> 
+                                    <Link to={`/Roster/${index}`}>
+                                        {singleP.name}
+                                    </Link>
                                 </li>
                             )
-                        })
+                        }) : <div>data loading</div> 
                     }
                 </ol>
             </div>
@@ -44,3 +25,7 @@ const Roster =(props) =>{
 }
 
 export default Roster;
+
+ {/* <Link to={"/Roster/" + index}>{singleP.name}</Link> */}
+
+// !props.playerProps.length ? <div>data loading</div> :
