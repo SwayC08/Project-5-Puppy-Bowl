@@ -1,19 +1,31 @@
 import { createRoot } from "react-dom/client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import Query from "./components/Query";
-import Roster from "./components/Roster";
+import { Query, Roster } from "./components";
 
 const Main = ()=> {
 
     return (
-        <div>
-            <Query />
-            <Roster />
-        </div>
+        <BrowserRouter>
+            <div>
+                <nav className="Nav">
+                    <Link to="/" >Search</Link>
+                    <Link to="/Roster" > Roster</Link>
+                </nav>
+                <Routes>
+                    <Route path="/" element={ <Query /> } />
+                    <Route path="/Roster" element={ <Roster  /> } />
+                </Routes>
+                { <Roster  /> }
+            </div>
+        </BrowserRouter>
     )
 }
 
 const app = document.getElementById("app");
 let root = createRoot(app);
 root.render(<Main />)
+
+
+// playerProps = {players}
