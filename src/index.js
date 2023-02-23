@@ -24,9 +24,12 @@ const Main = ()=> {
 
     return (
         <BrowserRouter>
-            <div>
+            <div className="Main">
                 <nav className="Nav">
-                    <Link to="/" >Home</Link>
+                    <p className="title"> &#128054;  &#127923;</p>
+                    <Link to="/" className="home" >
+                        <button>Home</button>
+                    </Link>
                 </nav>
                 <Routes>
                     <Route path="/" element={ 

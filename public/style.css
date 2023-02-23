@@ -5,68 +5,146 @@
 #app { 
     background-color: grey;
     display: flex;
-    justify-content: center;
-    height: 1000px;
-
+    flex-direction: column;
+    width: auto;
 }
 
+.Main {
+    padding: 100px;
+    background-image: url("https://media.istockphoto.com/id/1344371953/vector/bowling-game-pattern-background-vector-illustration.jpg?s=612x612&w=0&k=20&c=qy0b9wfAKFY43b0HAfpexVwLnd5YAC21FEDMQuGikBE=");
+    margin: 20px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.Nav {
+    /* border: dotted greenyellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    width: 710px;
+    margin-left: 170px;
+    height: 200px;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Nav Bar Title */
+.title {
+    color: white;
+    background-color: rgba(247, 248, 249, 0.842);
+    font-size: 130px;
+    border: solid grey;
+    border-width: 7px;
+    width: 475px;
+    text-align: center;
+}
+/* Nav Bar link home */
+.home {
+    background-color: rgba(247, 248, 249, 0.842);
+    height: 30px;
+    border: solid grey;
+    border-width: 7px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+/* Nav Bar home  button */
+button {
+    background-color: gray;
+    font-size: 18px;
+    padding: 5px;
+    
+}
+
+/* Search Bar */
 .Query {
-    background-color:teal;
+    background-color: rgba(247, 248, 249, 0.842);
     height: 70px;
+    width: 475px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    border: solid grey;
+    border-width: 7px;
+    padding: 10px;
 
 }
 
 .Roster {
-    background-color:steelblue;
-    height: 700px;
-    width: 900px;
+    /* border: dotted purple; */
+    height: auto;
+    width: auto;
+    /* width: 1000px; */
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
-    /* flex-wrap: nowrap; */
-
-}
-
-button {
-    background-color: gray;
-    
+    flex-direction: column;
+    align-items: center;
 }
 
 .Name {
+    /* border: dotted red; */
     display: flex;
-    justify-content:space-around;
+    flex-wrap: wrap; 
+    justify-content:space-between;
     flex-direction: column;
-    flex-wrap: wrap;
-    border: dotted red;
-    width: 850px;
-    height: 500px;
-    padding: 80px;
+    align-content: center;
+    width: 1050px;
+    height: 950px;
+    padding: 40px;
+    padding-top: 20px;
 }
 
 .Single {
+    background-color: rgba(247, 248, 249, 0.842);
     text-align: center;
     display: flex;
-    /* justify-content: flex-end; */
     flex-direction: column;
     padding: 10px;
-    border: dotted blue;
-    height: 180px;
-    width: 110px;
+    padding-bottom: 50px;
+    border: solid gray;
+    border-width: 10px;
+    margin-right: 40px;
+    height: 380px;
+    width: 140px;
 }
 
-.Nav {
-    border: dotted greenyellow;
-    display: flex;
-    justify-content: space-evenly;
-    padding-right: 50px;
-    width: 150px;
-    float: right;
-    /* margin: 0px 50px; */
-
-}
-
+/* images on main page */
 .Photos{
+    height: 200px;
+    height: 200px;
+}
+
+/* images on profile details page */
+.Profile-Photo{ 
     height: 400px;
     height: 400px;
 }
+
+
+/* Profile Details */
+.Bio {
+    background-color: rgba(247, 248, 249, 0.842);
+    border: solid grey;
+    border-width: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 600px;
+    padding: 10px;
+    font-size: 40px;
+}
+.stats {
+    float: left;
+}
+
+
 
