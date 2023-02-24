@@ -76,6 +76,45 @@ button {
     padding: 10px;
 
 }
+/* add players  */
+.Add {
+    background-color: rgba(247, 248, 249, 0.842);
+    height: 70px;
+    width: 475px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    border: solid grey;
+    border-width: 7px;
+    padding: 10px;
+
+}
+/* Remove box */
+.Delete {
+    background-color: rgba(247, 248, 249, 0.842);
+    height: 70px;
+    width: 475px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    border: solid grey;
+    border-width: 7px;
+    padding: 10px;
+
+}
+/* Add & Remove box */
+.Settings {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px;
+    margin: -30px 0px 0px 0px;
+    /* border: dotted purple; */
+}
 
 .Roster {
     /* border: dotted purple; */
@@ -89,14 +128,15 @@ button {
 }
 
 .Name {
-    /* border: dotted red; */
+    border: dotted red;
     display: flex;
     flex-wrap: wrap; 
     justify-content:space-between;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
+    /* margin-right: 40px; */
     width: 1050px;
-    height: 950px;
+    height: auto;
     padding: 40px;
     padding-top: 20px;
 }
@@ -110,7 +150,7 @@ button {
     padding-bottom: 50px;
     border: solid gray;
     border-width: 10px;
-    margin-right: 40px;
+    margin-bottom: 40px;
     height: 380px;
     width: 140px;
 }
@@ -145,6 +185,8 @@ button {
 .stats {
     float: left;
 }
+
+
 
 
 

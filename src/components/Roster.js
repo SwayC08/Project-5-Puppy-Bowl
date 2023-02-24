@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Roster =(props) =>{
@@ -17,11 +17,12 @@ const Roster =(props) =>{
                 )
         }
     )
-// start of visuals
+{/* start of visuals */}
     return(
             <div className="Roster">
 {/* Search Bar */}
                 <div className="Query">
+                    <h3>Search By:</h3>
                     <span>Name:  <input onChange= {(event)=>{
                         setInputName(event.target.value)
                     }} type="text"></input></span>
@@ -34,7 +35,7 @@ const Roster =(props) =>{
                         filterR.length ? 
                         filterR.map((singleP, index) => {
                             return (
-                                <li key={index} className="Single">
+                                <li key={ singleP.name } className="Single">
 {/* Photo */}                                    
                                     <p>{ <img className="Photos" src={singleP.imageUrl}/> }</p>
 {/* Name*/}                                     
@@ -42,15 +43,15 @@ const Roster =(props) =>{
 {/* Breed*/}                                     
                                     <p> Breed: {singleP.breed} </p>
 {/* Link button*/}                                    
-                                    <Link to={`/${index}`}>
+                                    <Link to={`/players/${ index }`}>
                                         <button>More Info</button>
-                                        {/* {singleP.name} */}
                                     </Link>
                                 </li>
                             )
                         }) : <div>No Data Available</div>
                     }
                 </ol>
+                <Link to="/" className="bottom-button"><button>Top</button></Link>
             </div>
     )
 }
