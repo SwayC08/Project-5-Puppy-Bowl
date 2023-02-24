@@ -51,7 +51,6 @@ const Roster =(props) =>{
                         }) : <div>No Data Available</div>
                     }
                 </ol>
-                <Link to="/" className="bottom-button"><button>Top</button></Link>
             </div>
     )
 }
