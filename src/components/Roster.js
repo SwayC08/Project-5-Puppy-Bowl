@@ -43,7 +43,7 @@ const Roster =(props) =>{
 {/* Breed*/}                                     
                                     <p> Breed: {singleP.breed} </p>
 {/* Link button*/}                                    
-                                    <Link to={`/players/${ index }`}>
+                                    <Link to={`/${ index }`}>
                                         <button>More Info</button>
                                     </Link>
                                 </li>

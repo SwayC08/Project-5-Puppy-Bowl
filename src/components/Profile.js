@@ -5,7 +5,7 @@ const Profile = (props) => {
 
     const { id } = useParams();
     const { playerProps } = props;
-    const selectedPlayer = playerProps [id];
+    const selectedPlayer = playerProps[id];
 
     return (
         <div className="Bio">
@@ -14,6 +14,7 @@ const Profile = (props) => {
                 <p>Name: {selectedPlayer.name}</p>
                 <p>Breed: {selectedPlayer.breed}</p> 
                 <p>Status: {props.playerProps[id].status}</p>
+                {/* <button onClick={ cycle }>Next Player</button> */}
                 <Link to="/"><button>Back</button></Link>
             </div>
             <p>{ <img className="Profile-Photo" src={selectedPlayer.imageUrl}/> }</p>
