@@ -5,16 +5,11 @@ import { Roster, Profile, NewPlayer, TitleNav, DeletePlayer } from "./components
 
 const Main = ()=> {
     const [players, setPlayers]= useState([]);
-// add new player Name
-    const [newPName, setNewPName] = useState(""); 
-// add new player Breed    
-    const [newPBreed, setNewPBreed] = useState("");
-// add new player Url (Photo)    
-    const [newPUrl, setNewPUrl] = useState("");
-// delete player by ID   
+    const [newPName, setNewPName] = useState("");   
+    const [newPBreed, setNewPBreed] = useState("");  
+    const [newPUrl, setNewPUrl] = useState("");  
     const [removeById, setRemoveById] = useState("");
 
-// fetch data from API  
     async function fetchPlayerInfo(){
         try {
             const response = await fetch ("https://fsa-puppy-bowl.herokuapp.com/api/2301-FTB-MT-WEB-FT/players");
@@ -24,14 +19,13 @@ const Main = ()=> {
             console.error(error);
         }
     };
-// state first render only
+
     useEffect(()=> {
         fetchPlayerInfo();
     }, []);
 
     return (
         <BrowserRouter>
-{/* Title & Nav */}
             <div className="Main">
                 <TitleNav />
                 <div className="Settings">
@@ -39,17 +33,16 @@ const Main = ()=> {
 
                     <DeletePlayer players={ players } setPlayers={ setPlayers } removeById={ removeById } setRemoveById={ setRemoveById } />
                 </div>
-                <Routes>
-{/* Roster & Homepage*/}                    
+                <Routes>                   
                     <Route path="/" element={ 
                         <Roster 
                             playerProps= { players } 
                         /> } 
-                    />
-{/* Profile (details)*/}                      
+                    />                      
                     <Route path="/:id" element={ 
                         <Profile 
-                            playerProps= { players }/> } 
+                            playerProps= { players }
+                        /> } 
                     />
                 </Routes>
             </div>
@@ -60,4 +53,3 @@ const Main = ()=> {
 const app = document.getElementById("app");
 let root = createRoot(app);
 root.render(<Main />)
-

@@ -3,7 +3,6 @@ const NewPlayer = (props) => {
     
     const { players, setPlayers, newPName, setNewPName, newPBreed, setNewPBreed, newPUrl, setNewPUrl} = props;
 
-    // Fetch response from API for new player
     async function newPlayerReq(event){
         event.preventDefault();
         try {
