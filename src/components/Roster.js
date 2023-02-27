@@ -22,13 +22,13 @@ const Roster =(props) =>{
                 <div className="Query">
                     <h3>Search By:</h3>
                     <span>Name:  
-                        <input onChange= {(event)=>{
+                        <input value={ inputName } onChange= {(event)=>{
                             setInputName(event.target.value)
                             }} type="text">
                         </input>
                     </span>
                     <span>Breed: 
-                        <input onChange= {(event)=>{
+                        <input value={ inputBreed } onChange= {(event)=>{
                             setInputBreed(event.target.value)
                             }} type="text">
                         </input>
