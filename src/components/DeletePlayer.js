@@ -12,13 +12,16 @@ const DeletePlayer = (props) => {
                         method: 'DELETE',
                     }
                 );
-                const translatedData = await response.json();
-                setPlayers([...players, translatedData])
-                // setPlayers([translatedData])
-                
+                const translatedData = await response.json();    
             } catch (error) {
                 console.log(error); 
             }
+            let filteredPlayers = players.filter(
+                (player)=>{
+                    return (player.id != removeById)
+                }
+            )
+            setPlayers(filteredPlayers)
     }
 
     return(
